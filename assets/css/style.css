@@ -11,3 +11,86 @@ hr.star-light:after {
   background-color:#7685b2;
 }
 
+html, body {
+  font-family: 'Quicksand', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit !important;
+}
+
+.hero-section {
+  background-image: url('../img/neel.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+  padding-top: 70px; /* to account for navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional dark blur */
+  z-index: 0; /* lower layer */
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/neel.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+
+
+.hero-section .container {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* optional responsiveness */
+}
+
+.hero-image {
+  background-image: url('../img/neel_zoomed.jpeg');
+  background-size: cover;
+  background-position:  30% center;;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  
+}
+
+.hero-text {
+  color: white;
+  max-width: 500px;
+}
+
+.name-header {
+  font-size: 3rem;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
