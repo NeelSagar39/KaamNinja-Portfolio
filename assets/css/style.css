@@ -89,9 +89,6 @@ hr.star-light:after {
   transform-origin: left;
 }
 
-
-
-
 .hero-section {
   height: 80vh;
   position: relative;
@@ -411,4 +408,22 @@ hr.star-light:after {
   font-size: 0.8rem;
   color: #555;  
   border-top: 1px solid #ccc;
+}
+
+@media (max-width: 992px) {
+  #contact {
+    margin-top: 10rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  #contact {
+    margin-top: 18rem; 
+  }
+}
+
+@media (max-width: 576px) {
+  .social-icons {
+    gap: 2rem;
+  }
 }
