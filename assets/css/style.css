@@ -1,3 +1,24 @@
+/* Default Style */
+html, body {
+  font-family: 'Quicksand', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
 .bg-primary {
   background-color:#7685b2!important;
 }
@@ -11,13 +32,6 @@ hr.star-light:after {
   background-color:#7685b2;
 }
 
-html, body {
-  font-family: 'Quicksand', sans-serif !important;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: inherit !important;
-}
-
 .navbar .container {
   width: 100%;
 }
@@ -25,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
   height: 80vh;
   position: relative;
-  padding-top: 70px; /* to account for navbar */
+  padding-top: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* optional responsiveness */
+  flex-wrap: wrap; 
 }
 
 .hero-image {
@@ -111,3 +125,119 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-size: 1.2rem;
 }
+
+/* Portfolio Section */
+.portfolio {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+/* Card Styles */
+.portfolio-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 24px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Card Hover Effects */
+.portfolio-card:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.portfolio-card:hover .portfolio-img {
+  filter: invert(1);
+}
+
+.portfolio-card:hover .portfolio-item-caption {
+  opacity: 1;
+}
+
+.portfolio-card:hover .card-title,
+.portfolio-card:hover .card-text,
+.portfolio-card:hover .portfolio-description {
+  color: #fff;
+}
+
+/* Image Styles */
+.portfolio-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: filter 0.3s ease;
+}
+
+/* Caption overlay */
+.portfolio-item-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Text Styles */
+.portfolio-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-description {
+  font-size: 0.95rem;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-description {
+  color: #ccc;
+}
+
+/* Holographic Effect */
+.holographic {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  background: #fff;
+  color: #111;
+}
+
+.holographic:hover {
+  transform: scale(1.05);
+  background: #000; 
+  color: #0ff; 
+}
+
+.holographic::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(0, 255, 255, 0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 1;
+}
+
+.holographic:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+/* Ensure content stays above the ::before layer */
+.holographic * {
+  position: relative;
+  z-index: 2;
+}
+
