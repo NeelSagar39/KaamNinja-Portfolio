@@ -307,7 +307,7 @@ hr.star-light:after {
   left: 0;
   height: 70%;
   width: 100%;
-  background-image: url('/assets/img/project/project-bg.jpg');
+  background-image: url('../img/project/project-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -360,7 +360,7 @@ hr.star-light:after {
 }
 
 .about-me-image {
-  background-image: url('/assets/img/about/neel-about-me.jpeg');
+  background-image: url('../img/about/neel-about-me.jpeg');
   background-size: cover;
   background-position:  30% center;;
   background-repeat: no-repeat;
