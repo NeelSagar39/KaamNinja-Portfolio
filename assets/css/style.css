@@ -36,6 +36,62 @@ hr.star-light:after {
   width: 100%;
 }
 
+#mainNav.navbar-shrink {
+  height: 50px;
+  color: #222;
+  transition: height 0.3s ease, color 0.3s ease;
+}
+
+#mainNav.navbar-shrink a,
+#mainNav.navbar-shrink .navbar-brand,
+#mainNav.navbar-shrink .navbar-link {
+  color: #222 !important;
+}
+
+#mainNav.navbar-blur {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.3s ease;
+}
+
+#mainNav .nav-link {
+  position: relative;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+#mainNav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: black;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+#mainNav .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#mainNav .nav-link.active {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+#mainNav .nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+
+
 .hero-section {
   height: 80vh;
   position: relative;
@@ -80,7 +136,6 @@ hr.star-light:after {
   border-radius: 16px;
   flex-shrink: 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  
 }
 
 .hero-text {
@@ -241,3 +296,119 @@ hr.star-light:after {
   z-index: 2;
 }
 
+.projects-section {
+  position: relative;
+  padding: 100px 0;
+  color: white;
+  height: 700px;
+}
+
+.projects-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70%;
+  width: 100%;
+  background-image: url('/assets/img/project/project-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  filter: brightness(0.3);
+}
+
+.projects-heading {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.projects-subtitle {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.projects-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.575);
+}
+
+.projects-row {
+  margin-top: 10%;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 24px;
+  height: 100%;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-container {
+  margin: 0 auto;
+  justify-content: center;
+  width: 80%;
+}
+
+.about-me-image {
+  background-image: url('/assets/img/about/neel-about-me.jpeg');
+  background-size: cover;
+  background-position:  30% center;;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.lead {
+  font-weight: 400;
+}
+
+.social-icons {
+  gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-link {
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.2);
+}
+
+.social-link i {
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  display: inline-block;
+  text-align: center;
+}
+
+.footer-section {
+  background-color: white;
+  text-align: left;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  color: #555;  
+  border-top: 1px solid #ccc;
+}
